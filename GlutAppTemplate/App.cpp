@@ -1,7 +1,7 @@
 #include "App.h"
 
 static App* singleton;
-
+/*/
 void app_timer(int value){
     if (singleton->game_over){
         singleton->gameOver->advance();
@@ -52,7 +52,7 @@ void app_timer(int value){
     }
     
     
-}
+}*/
 
 App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w, h){
     // Initialize state variables
@@ -73,7 +73,7 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     moving = true;
     game_over = false;
     
-    app_timer(1);
+    //app_timer(1);
 
 }
 
@@ -142,12 +142,20 @@ void App::mouseDown(float x, float y){
     mx = x;
     my = y;
 
+	if (singleton->ball->contains(x, y)) {
+		mouseDrag(x, y);
+	}
+
 }
 
 void App::mouseDrag(float x, float y){
     // Update app state
-    mx = x;
-    my = y;
+    //mx = x;
+    //my = y;
+
+	singleton->ball->x = x;
+	singleton->ball->y = y;
+	redraw();
 
 }
 
