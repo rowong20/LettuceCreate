@@ -1,0 +1,25 @@
+﻿  App.cpp
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(13): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(16): warning C4305: '+=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(19): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(31): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(34): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(37): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(40): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(65): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(67): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(69): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(123): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(126): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(127): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(173): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(174): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\app.cpp(175): warning C4305: '=': truncation from 'double' to 'float'
+  TexRect.cpp
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\texrect.cpp(32): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\texrect.cpp(33): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\texrect.cpp(45): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\sabrina\documents\cse165\transparenttexturescrossplatform\transparenttexturescrossplatform\texrect.cpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
+AnimatedRect.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  glutapp.vcxproj -> C:\Users\Sabrina\Documents\CSE165\TransparentTexturesCrossPlatform\TransparentTexturesCrossPlatform\visualc15\obj\glutapp_Debug\glutapp.exe
