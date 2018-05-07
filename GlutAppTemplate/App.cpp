@@ -61,12 +61,12 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     mx = 0.0;
     my = 0.0;
     
-    background = new TexRect("../images/sky.png", -1, 1, 2, 2);
-    ball = new TexRect("../images/mushroom.png", 0, 0.67, 0.2, 0.2);
+    background = new TexRect("../images/board.png", -1, 1, 2, 2);
+    ball = new TexRect("../images/mushroom_uncut.png", 0, 0.67, 0.2, 0.2);
 
-    platform = new TexRect("../images/board.png", 0, -0.7, 0.6, 0.2);
+    platform = new TexRect("../images/pan_empty.png", 0, -0.7, 0.6, 0.2);
     
-    gameOver = new AnimatedRect("../images/game_over.png", 7, 1, -1.0, 0.8, 2, 1.2);
+    gameOver = new AnimatedRect("../images/knife.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
     up = down = left = right = false;
     
