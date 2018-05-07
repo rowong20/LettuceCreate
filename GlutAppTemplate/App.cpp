@@ -1,4 +1,5 @@
 #include "App.h"
+#include<iostream>
 
 static App* singleton;
 /*/
@@ -61,12 +62,17 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     mx = 0.0;
     my = 0.0;
     
-    background = new TexRect("../images/sky.png", -1, 1, 2, 2);
-    ball = new TexRect("../images/mushroom.png", 0, 0.67, 0.2, 0.2);
+	/*/
+    background = new TexRect("../images/background.png", -1, 1, 2, 2);
+   
+	ball = new TexRect("../images/mushroom_uncut.png", 0, 0.67, 0.2, 0.2);
 
     platform = new TexRect("../images/board.png", 0, -0.7, 0.6, 0.2);
     
     gameOver = new AnimatedRect("../images/game_over.png", 7, 1, -1.0, 0.8, 2, 1.2);
+	*/
+
+	ball = new container("../images/pot.png", 0, 0.67, 0.2, 0.2, 1);
     
     up = down = left = right = false;
     
@@ -120,16 +126,16 @@ void App::draw() {
     // Set up the transformations stack
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-	background->draw(0.1);
+	//background->draw(0.1);
 
 	glColor3f(1,1,1);
-	platform->draw(-0.3);
-	ball->draw(-0.4);
+	//platform->draw(-0.3);
+	ball->object->draw(-0.4);
 	
 	
    
     
-	gameOver->draw();
+	//gameOver->draw();
 	
     // We have been drawing everything to the back buffer
     // Swap the buffers to see the result of what we drew
@@ -142,9 +148,6 @@ void App::mouseDown(float x, float y){
     mx = x;
     my = y;
 
-	if (singleton->ball->contains(x, y)) {
-		mouseDrag(x, y);
-	}
 
 }
 
@@ -152,10 +155,11 @@ void App::mouseDrag(float x, float y){
     // Update app state
     //mx = x;
     //my = y;
-
-	singleton->ball->x = x;
-	singleton->ball->y = y;
-	redraw();
+	if (ball->object->contains(x, y)) {
+		ball->object->x = x - ball->object->w/2;
+		ball->object->y = y + ball->object->h/2;
+		redraw();
+	}
 
 }
 
@@ -167,23 +171,23 @@ void App::keyPress(unsigned char key) {
     if (key == 27){
         // Exit the app when Esc key is pressed
         
-        delete ball;
+       /* delete ball;
         delete platform;
         delete gameOver;
         delete background;
         delete this;
-        
+        */
         exit(0);
     }
     
     if (key == ' '){
-        ball->x = 0;
+      /*  ball->x = 0;
         ball->y = 0.67;
         ball->yinc = 0.01;
         ball->xinc = 0.01;
         ball->rising = false;
         game_over = false;
         gameOver->stop();
-        moving = true;
+        moving = true;*/
     }
 }

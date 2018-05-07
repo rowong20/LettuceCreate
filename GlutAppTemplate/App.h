@@ -4,6 +4,7 @@
 #include "GlutApp.h"
 #include "TexRect.h"
 #include "AnimatedRect.h"
+#include "visualc15/container.h"
 
 class App: public GlutApp {
     // Maintain app state here
@@ -24,7 +25,7 @@ public:
     void specialKeyUp(int key);
     
     void idle();
-    
+   /*/ 
     TexRect* ball;
     
     TexRect* platform;
@@ -32,7 +33,10 @@ public:
     TexRect* background;
     
     AnimatedRect* gameOver;
-    
+    */
+
+	container* ball;
+
     bool up;
     bool down;
     bool left;

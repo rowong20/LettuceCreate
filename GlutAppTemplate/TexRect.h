@@ -12,12 +12,15 @@
 #include <SOIL.h>
 #endif
 
+
 class TexRect {
 public:
     float x;
     float y;
     float w;
     float h;
+
+
     GLuint texture_id;
 
 

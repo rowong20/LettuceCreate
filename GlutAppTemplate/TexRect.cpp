@@ -1,5 +1,5 @@
 #include "TexRect.h"
-
+#include<iostream>
 
 TexRect::TexRect (const char* filename, float x=0, float y=0, float w=0.5, float h=0.5){
     
@@ -26,6 +26,7 @@ TexRect::TexRect (const char* filename, float x=0, float y=0, float w=0.5, float
     this->w = w;
     this->h = h;
     
+
     rising = false;
     movingLeft = true;
     
@@ -115,7 +116,15 @@ void TexRect::draw(float z){
 
 
 bool TexRect::contains(float mx, float my){
-    return mx >= x && mx <= x+w && my <= y && my >= y - h;
+
+	if (mx >= x && mx <= x + w && my <= y && my >= y - h) {
+		std::cout << "Coordinates within " << x << y << std::endl;
+		std::cout << "Click coordinates" << mx << my << std::endl;
+			return true;
+	}
+	else {
+		return false;
+	}
 }
 
 
