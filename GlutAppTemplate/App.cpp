@@ -1,6 +1,10 @@
 #include "App.h"
+#include "vector"
+
+using namespace std;
 
 static App* singleton;
+vector<int> kitchenTimer;
 /*/
 void app_timer(int value){
     if (singleton->game_over){
@@ -83,6 +87,9 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
 	dish2 = new TexRect("../images/plate.png", 0.3, -0.1, 0.2, 0.3);
 	trash = new TexRect("../images/trash.png", 0.7, -0.1, 0.2, 0.3);
 	serve = new TexRect("../images/serve.png", 0.7, 0.4, 0.2, 0.3);
+
+	for (int i = 0; i < 6; i++)
+		kitchenTimer.push_back(0);
     
     //gameOver = new AnimatedRect("../images/game_over.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
@@ -95,23 +102,38 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
 
 }
 
-int potpanTimer(float x, float y, bool full)						//0 = undercooked; 1 = cooked; 2 = overcooked
-{
-	if (full)
-	{
-		
-	}
-	return 0;
-}
-
-int cuttingTimer(float x, float y, bool full)						//0 = uncut; 1 = cut
-{
-	if (full)
-	{
-
-	}
-	return 0;
-}
+//void App::kitchenTimerGauge(bool full, int which)						//0 = undercooked; 1 = cooked; 2 = overcooked for pots/pans
+//{																	//0 = uncut; 1 = cut for board
+//	if (full)
+//	{
+//		if (which == 0)						//pan1
+//		{
+//			glColor3d(0.0, 252.0, 0.0);
+//			glRectd(-0.6, 0.05, -0.8, -0.05);
+//			//glutTimerFunc(6000, kitchenTimerGauge,)
+//		}
+//		else if (which == 1)				//pan2
+//		{
+//
+//		}
+//		else if (which == 2)				//pot1
+//		{
+//
+//		}
+//		else if (which == 3)				//pot2
+//		{
+//
+//		}
+//		else if (which == 4)				//board1
+//		{
+//			glColor3d(0.0, 252.0, 0.0);
+//		}
+//		else if (which == 5)				//board2
+//		{
+//			glColor3d(0.0, 252.0, 0.0);
+//		}
+//	}
+//}
 
 void App::specialKeyPress(int key){
     if (!game_over){
@@ -175,9 +197,30 @@ void App::draw() {
 	tomato->draw(-0.4);
 	mushroom->draw(-0.4);
 	onion->draw(-0.4);
+
+	/*glColor3d(0.0, 252.0, 0.0);
+	glBegin(GL_POLYGON);
+
+	glVertex2f(-0.6, 0.05);
+	glVertex2f(-0.8, 0.05);
+	glVertex2f(-0.8, -0.05);
+	glVertex2f(-0.6, -0.05);
+
+	glEnd();*/
 	
-	
-   
+	//kitchenTimerGauge(true, 0);
+
+	//testing Timer
+	Timer t(-0.6, 0.05);
+	cout << "fullgauge before advance: "<< t.done() << endl;
+	for (int i = 0; i < 100; i++)
+	{
+		t.advanceGauge();
+		t.drawPotGauge();
+		//redraw();
+	}
+	cout << "fullgauge after advance: " << t.done() << endl;
+	//testing Timer
     
 	//gameOver->draw();
 	

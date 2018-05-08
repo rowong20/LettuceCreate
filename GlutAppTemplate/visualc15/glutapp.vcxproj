@@ -121,6 +121,7 @@
     <ClCompile Include="..\app_main.cpp" />
     <ClCompile Include="..\GlutApp.cpp" />
     <ClCompile Include="..\TexRect.cpp" />
+    <ClCompile Include="..\Timer.cpp" />
     <ClCompile Include="..\windows\image_DXT.c" />
     <ClCompile Include="..\windows\image_helper.c" />
     <ClCompile Include="..\windows\SOIL.c" />
@@ -131,6 +132,7 @@
     <ClInclude Include="..\App.h" />
     <ClInclude Include="..\GlutApp.h" />
     <ClInclude Include="..\TexRect.h" />
+    <ClInclude Include="..\Timer.h" />
     <ClInclude Include="..\windows\image_DXT.h" />
     <ClInclude Include="..\windows\image_helper.h" />
     <ClInclude Include="..\windows\SOIL.h" />

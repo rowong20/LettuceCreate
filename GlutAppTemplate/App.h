@@ -4,6 +4,7 @@
 #include "GlutApp.h"
 #include "TexRect.h"
 #include "AnimatedRect.h"
+#include "Timer.h"
 
 class App: public GlutApp {
     // Maintain app state here
@@ -25,8 +26,7 @@ public:
     
     void idle();
 
-	int potpanTimer(float x, float y, bool full);				//(x pos of pot/pan, y pos of pot/pan, if pot/pan is full)
-	int cuttingTimer(float x, float y, bool full);				//(x pos of board, y pos of board, if board is full)
+	//void kitchenTimerGauge(bool full, int which);				//(if pot/pan/board is full, which pot/pan/board)
     
     TexRect* bun;
 	TexRect* meat;
