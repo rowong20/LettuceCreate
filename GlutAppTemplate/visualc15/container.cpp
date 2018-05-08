@@ -1,6 +1,16 @@
 #include "container.h"
 #include "GlutApp.h"
 #include <iostream>
+#include <time.h>
+#include <ctime>
+
+#define CLOCKS_PER_SEC ((clock_t)1000)
+
+void delay(float secs)
+{
+	float end = clock() / CLOCKS_PER_SEC + secs;
+	while ((clock() / CLOCKS_PER_SEC) < end);
+}
 
 //abstract class container
 container::container() {
@@ -9,7 +19,7 @@ container::container() {
 void container::addIngredient(Ingredient* i) {
 	//as long as container is not full, it adds an ingredient
 
-	if (!isFull()) {
+	if (!this->isFull()) {
 		this->ingredients.push_back(i);
 	}
 }
@@ -27,10 +37,10 @@ bool container::isFull() {
 }
 
 //checks if intersecting
-bool container::contains(float x, float y) {
+/*bool container::contains(float x, float y) {
 	//checks if the ingredients intersect with the board
 	return x >= this->x && x <= this->x + this->w && y <= this->y && y >= this->y - this->h;
-}
+}*/
 
 container::~container()
 {
@@ -81,16 +91,14 @@ void pot::cook() {
 		int i = 0;
 		while (i < 3) {
 			//then iterate between the two images
-			glutTimerFunc(200, app_timer, 1);
+			delay(1);
 			changeImage("../images/pot_onion2");
-			glutTimerFunc(200, app_timer, 1);
+			delay(1);
 			changeImage("../images/pot_onion1");
 
 			i++;
 		}
 
-
-		glutTimerFunc(100, app_timer, 1);
 		changeImage("../images/pot_onion3");
 		//perfect cooking
 		this->Cooked = 1;
@@ -151,7 +159,7 @@ void pan::cook() {
 		changeImage("../images/pan_meat");
 
 		//last image of completed cooking
-		glutTimerFunc(1500, app_timer, 1);
+		delay(7);
 		changeImage("../images/pan_cooked");
 
 	}
@@ -166,7 +174,7 @@ void pan::cook() {
 
 void pan::empty() {
 	//reset pan
-	this->cooking == false;
+	this->cooking = false;
 	changeImage("../images/pan_empty");
 
 }
@@ -202,7 +210,7 @@ board::board(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 }
 
 
-int board::action(Ingredient* ingredient) {
+void board::action(Ingredient* ingredient) {
 	//ingredients needs to detect object to cut
 	//how to decide this?
 	if (this->contains(ingredient->x, ingredient->y)) {
@@ -212,9 +220,9 @@ int board::action(Ingredient* ingredient) {
 	//not sure what to do but the cutting animation is handled by ingredients?
 	
 	//if statement indicates that this is a cutting board
-	if (cutting) {
-		return 1;
-	}
+}
+
+void board::empty() {
 
 }
 plate::plate(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
@@ -243,6 +251,10 @@ plate::plate(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 
 
 
+}
+void plate::empty() {
+	delay(1);
+	changeImage("../images/plate");
 }
 void plate::action() {
 

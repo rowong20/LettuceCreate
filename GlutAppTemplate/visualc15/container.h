@@ -16,14 +16,18 @@ public:
 	//array to show what ingredients are in there
 	std::vector<Ingredient*>ingredients;
 	container();
+	
 	//each container will do different things
-	virtual void action() = 0;
+	virtual void action(Ingredient*) = 0;
+	
 	bool isFull();
 	//to add an ingredient to the vector of ingredients
 	void addIngredient(Ingredient* i);
 
+	virtual void empty() = 0;
+
 	//indicates if there is an object intersecting
-	bool contains(float, float);
+	//bool contains(float, float);
 	~container();
 };
 class pot :public container
@@ -66,10 +70,11 @@ public:
 	bool cutting;
 	board(float, float, float, float);
 
-	//used for ingredients to detect that they can be cut
-	int action(Ingredient*);
+	//used for ingredients to detect that they can be cut1
+	void action(Ingredient*);
 	//sees if there is an ingredient on it
-	bool contains(float, float);
+//	bool contains(float, float);
+	void empty();
 };
 class plate :public container
 {
@@ -78,5 +83,6 @@ class plate :public container
 public:
 	plate(float, float, float, float);
 	void action();
+	void empty();
 };
 #endif
