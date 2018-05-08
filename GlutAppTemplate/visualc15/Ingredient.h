@@ -55,4 +55,12 @@ public:
 	void cut();
 	void cooked(int quality);
 };
+class Bun:public Ingredient {
+	int status;
+public:
+	Bun(float, float, float, float);
+	int getStatus();
+	void cut();
+	void cooked(int quality);
+};
 #endif

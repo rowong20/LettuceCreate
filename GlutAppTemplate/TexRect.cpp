@@ -130,7 +130,6 @@ void TexRect::draw(float z){
     glVertex3f(x+w, y - h, z);
     
     glEnd();
-	std::cout << "drawing object" << std::endl;
     glDisable(GL_TEXTURE_2D);
 }
 

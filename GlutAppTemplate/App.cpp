@@ -155,6 +155,18 @@ void App::mouseDrag(float x, float y){
 	}
 
 }
+void App::mouseUp(float x, float y) {
+	// Update app state
+	//mx = x;
+	//my = y;
+	float objectx = tomato->x + tomato->w / 2;
+	float objecty = tomato->y - tomato->h / 2;
+	std::cout << "Coordinates of object is centered at: " << objectx << "," << objecty << std::endl;
+	if (platform->contains(objectx,objecty)){
+		std::cout << "its in!" << std::endl;
+	}
+
+}
 
 void App::idle(){
 
