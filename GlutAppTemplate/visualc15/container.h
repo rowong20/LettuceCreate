@@ -14,10 +14,12 @@ class container :public TexRect
 	bool full;
 public:	
 	//array to show what ingredients are in there
+	const char* defaultImage;
 	std::vector<Ingredient*>ingredients;
 	container();
 	//each container will do different things
 	virtual void action() = 0;
+	void transfer(container* &input);
 	bool isFull();
 	//to add an ingredient to the vector of ingredients
 	void addIngredient(Ingredient* i);
