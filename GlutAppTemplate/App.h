@@ -25,13 +25,29 @@ public:
     
     void idle();
     
-    TexRect* ball;
+    TexRect* bun;
+	TexRect* meat;
+	TexRect* lettuce;
+	TexRect* mushroom;
+	TexRect* onion;
+	TexRect* tomato;
     
-    TexRect* platform;
+    TexRect* pan1;
+	TexRect* pot1;
+	TexRect* board1;
+
+	TexRect* pan2;
+	TexRect* pot2;
+	TexRect* board2;
+
+	TexRect* dish1;
+	TexRect* dish2;
+	TexRect* trash;
+	TexRect* serve;
     
     TexRect* background;
     
-    AnimatedRect* gameOver;
+    //AnimatedRect* gameOver;
     
     bool up;
     bool down;
