@@ -5,8 +5,11 @@
 #include "TexRect.h"
 #include "AnimatedRect.h"
 #include "../visualc15/Ingredient.h"
+#include "Sound.h"
 class App: public GlutApp {
     // Maintain app state here
+	Sound sound;
+	irrklang::ISoundEngine* se;
     float mx;
     float my;
 public:
