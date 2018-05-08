@@ -35,5 +35,7 @@ c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(159): wa
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(264): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(265): warning C4305: '=': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(266): warning C4305: '=': truncation from 'double' to 'float'
+  app_main.cpp
+  Generating Code...
 AnimatedRect.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   glutapp.vcxproj -> C:\Users\Richard\Documents\GitHub\LettuceCreate\GlutAppTemplate\visualc15\obj\glutapp_Debug\glutapp.exe
