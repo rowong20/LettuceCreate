@@ -4,7 +4,7 @@
 #include "GlutApp.h"
 #include "TexRect.h"
 #include "AnimatedRect.h"
-
+#include "../visualc15/Ingredient.h"
 class App: public GlutApp {
     // Maintain app state here
     float mx;
@@ -31,6 +31,8 @@ public:
     
     TexRect* background;
     
+	Ingredient* tomato;
+
     AnimatedRect* gameOver;
     
     bool up;
