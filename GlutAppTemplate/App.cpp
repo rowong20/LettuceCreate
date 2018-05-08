@@ -61,11 +61,24 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     mx = 0.0;
     my = 0.0;
     
-    background = new TexRect("../images/board.png", -1, 1, 2, 2);
+    background = new TexRect("../images/background.png", -1, 1, 2, 2);
     ball = new TexRect("../images/mushroom_uncut.png", 0, 0.67, 0.2, 0.2);
 	tomato = new Onion(.2, -0.7, 0.2, 0.2);
-    platform = new TexRect("../images/pan_empty.png", 0, -0.7, 0.6, 0.2);
-    tool=new pan(-.2, -0.7, 0.2, 0.2);
+
+   platform = new TexRect("../images/pan_empty.png", 0, -0.7, 0.6, 0.2);
+  
+	//initializing items in container class
+	pan1 = new pan(-.5, -0.7, 0.3, 0.3);
+	pan2 = new pan(0.1, -0.7, 0.3, 0.3);
+	pot1 = new pot(0.7, -0.1, 0.3, 0.3);
+	pot2 = new pot(0.7, 0.4, 0.3, 0.3);
+	board1 = new board(-.95, -0.1, 0.3, 0.3);
+	board2 = new board(-.95, .4, 0.3, 0.3);
+
+
+
+
+
     gameOver = new AnimatedRect("../images/knife.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
     up = down = left = right = false;
@@ -123,10 +136,21 @@ void App::draw() {
 	background->draw(0.1);
 
 	glColor3f(1,1,1);
-	platform->draw(-0.3);
+	//platform->draw(-0.3);
 	ball->draw(-0.4);
-	tomato->draw(-0.5);
-	tool->draw(-0.5);
+	tomato->draw(-0.6);
+
+
+	//drawing containers
+	pan1->draw(-0.5);
+	pan2->draw(-0.5);
+	pot1->draw(-0.5);
+	pot2->draw(-0.5);
+	board1->draw(-0.5);
+	board2->draw(-0.5);
+
+
+
    
     
 	gameOver->draw();
@@ -165,9 +189,17 @@ void App::keyPress(unsigned char key) {
         // Exit the app when Esc key is pressed
         
         delete ball;
-        delete platform;
+        //delete platform;
         delete gameOver;
         delete background;
+
+		delete pan1;
+		delete pan2;
+		delete pot1;
+		delete pot2;
+		delete board1;
+		delete board2;
+
         delete this;
         
         exit(0);

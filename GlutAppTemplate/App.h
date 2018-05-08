@@ -34,7 +34,15 @@ public:
     
 	Ingredient* tomato;
 
-	container* tool;
+	container* pan1;
+	container* pan2;
+	container* board1;
+	container* board2;
+	container* pot1;
+	container* pot2;
+
+
+
     AnimatedRect* gameOver;
     
     bool up;

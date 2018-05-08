@@ -1,4 +1,5 @@
 #include "container.h"
+#include "GlutApp.h"
 #include <iostream>
 
 //abstract class container
@@ -24,6 +25,13 @@ bool container::isFull() {
 	}
 	return full;
 }
+
+//checks if intersecting
+bool container::contains(float x, float y) {
+	//checks if the ingredients intersect with the board
+	return x >= this->x && x <= this->x + this->w && y <= this->y && y >= this->y - this->h;
+}
+
 container::~container()
 {
 }
@@ -50,10 +58,54 @@ pot::pot(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->y = y;
 	this->w = w;
 	this->h = h;
+	
+	//initialize first imagae
+	this->Cooked = 0;
+	this->cooking = false;
 }
-void pot::action() {
+
+void pot::action(Ingredient* ingredient) {
+	if (this->contains(ingredient->x, ingredient->y)) {
+		cooking = true;
+		cook();
+	}
+}
+
+//added a cooking function to pot
+void pot::cook() {
+
+	if (cooking == true) {
+		//immediately change to cooking the pot first image
+		changeImage("../images/pot_onion1");
+		
+		int i = 0;
+		while (i < 3) {
+			//then iterate between the two images
+			glutTimerFunc(200, app_timer, 1);
+			changeImage("../images/pot_onion2");
+			glutTimerFunc(200, app_timer, 1);
+			changeImage("../images/pot_onion1");
+
+			i++;
+		}
+
+
+		glutTimerFunc(100, app_timer, 1);
+		changeImage("../images/pot_onion3");
+		//perfect cooking
+		this->Cooked = 1;
+	}
 
 }
+
+void pot::empty() {
+	//resets pot
+	this->cooking = false;
+	changeImage("../images/pot_empty");
+}
+
+
+
 pan::pan(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/pan_empty.png";
 	std::cout << " Creating Pot" << std::endl;
@@ -77,10 +129,49 @@ pan::pan(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->y = y;
 	this->w = w;
 	this->h = h;
+
+	//is not cooking
+	this->cooking = false; 
+	//cooking is zero
+	this->Cooked = 0;
 }
-void pan::action() {
+
+void pan::action(Ingredient* ingredient) {
+	if (this->contains(ingredient->x, ingredient->y)) {
+		cooking = true;
+		cook();
+	}
+}
+
+void pan::cook() {
+
+	if (this->cooking == true) {
+
+		//changes to show meat on the pan
+		changeImage("../images/pan_meat");
+
+		//last image of completed cooking
+		glutTimerFunc(1500, app_timer, 1);
+		changeImage("../images/pan_cooked");
+
+	}
+
+	//perfect cooking
+	this->Cooked = 1;
+	
+	//needs a function to detect when food is taken off?
+	//then calls empty pan function
 
 }
+
+void pan::empty() {
+	//reset pan
+	this->cooking == false;
+	changeImage("../images/pan_empty");
+
+}
+
+
 board::board(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/board.png";
 	std::cout << " Creating Pot" << std::endl;
@@ -104,8 +195,26 @@ board::board(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->y = y;
 	this->w = w;
 	this->h = h;
+
+	//theres no object to cut
+	cutting = false;
+
 }
-void board::action() {
+
+
+int board::action(Ingredient* ingredient) {
+	//ingredients needs to detect object to cut
+	//how to decide this?
+	if (this->contains(ingredient->x, ingredient->y)) {
+		cutting = true;
+	}
+
+	//not sure what to do but the cutting animation is handled by ingredients?
+	
+	//if statement indicates that this is a cutting board
+	if (cutting) {
+		return 1;
+	}
 
 }
 plate::plate(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
@@ -131,8 +240,13 @@ plate::plate(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->y = y;
 	this->w = w;
 	this->h = h;
+
+
+
 }
 void plate::action() {
+
+
 
 }
 
