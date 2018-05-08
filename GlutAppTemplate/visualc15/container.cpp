@@ -40,13 +40,25 @@ bool container::isFull() {
 /*bool container::contains(float x, float y) {
 	//checks if the ingredients intersect with the board
 	return x >= this->x && x <= this->x + this->w && y <= this->y && y >= this->y - this->h;
+<<<<<<< HEAD
 }*/
 
+=======
+}
+//transfers the contents of one container to the other, and clears the input container afterwards
+void container::transfer(container* &input)
+{
+	this->ingredients = input->ingredients;
+	input->ingredients.clear();
+	input->changeImage(input->defaultImage);
+}
+>>>>>>> 8df773405994eaeb2796eee4a780613feb19d247
 container::~container()
 {
 }
 pot::pot(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/pot_empty.png";
+	defaultImage = filename;
 	std::cout << " Creating Pot" << std::endl;
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
@@ -116,6 +128,7 @@ void pot::empty() {
 
 pan::pan(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/pan_empty.png";
+	defaultImage = filename;
 	std::cout << " Creating Pot" << std::endl;
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
@@ -182,6 +195,7 @@ void pan::empty() {
 
 board::board(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/board.png";
+	defaultImage = filename;
 	std::cout << " Creating Pot" << std::endl;
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
@@ -227,6 +241,7 @@ void board::empty() {
 }
 plate::plate(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/plate.png";
+	defaultImage = filename;
 	std::cout << " Creating Pot" << std::endl;
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
