@@ -95,6 +95,24 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
 
 }
 
+int potpanTimer(float x, float y, bool full)						//0 = undercooked; 1 = cooked; 2 = overcooked
+{
+	if (full)
+	{
+		
+	}
+	return 0;
+}
+
+int cuttingTimer(float x, float y, bool full)						//0 = uncut; 1 = cut
+{
+	if (full)
+	{
+
+	}
+	return 0;
+}
+
 void App::specialKeyPress(int key){
     if (!game_over){
         if (key == 100){

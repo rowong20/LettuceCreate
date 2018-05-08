@@ -24,6 +24,9 @@ public:
     void specialKeyUp(int key);
     
     void idle();
+
+	int potpanTimer(float x, float y, bool full);				//(x pos of pot/pan, y pos of pot/pan, if pot/pan is full)
+	int cuttingTimer(float x, float y, bool full);				//(x pos of board, y pos of board, if board is full)
     
     TexRect* bun;
 	TexRect* meat;
