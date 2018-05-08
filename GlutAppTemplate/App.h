@@ -36,8 +36,23 @@ public:
     TexRect* background;
     
 	Ingredient* tomato;
-	Ingredient* s1;
-	Ingredient* s2;
+	Ingredient* onion;
+	Ingredient* lettuce;
+	Ingredient* meat;
+	Ingredient* mushroom;
+
+	std::vector<Ingredient*>ingredients;
+
+	container* pan1;
+	container* pan2;
+	container* board1;
+	container* board2;
+	container* pot1;
+	container* pot2;
+	container* plate1;
+	container* plate2;
+
+	std::vector<container*>containers;
 
     AnimatedRect* gameOver;
     

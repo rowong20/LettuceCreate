@@ -19,6 +19,7 @@ public:
 	container();
 	//each container will do different things
 	void transfer(container* &input);
+	virtual void cook();
 	bool isFull();
 	//to add an ingredient to the vector of ingredients
 	void addIngredient(Ingredient* i);
@@ -69,7 +70,7 @@ public:
 	board(float, float, float, float);
 	void check();
 	//used for ingredients to detect that they can be cut
-	int action(Ingredient*);
+	void action(Ingredient*);
 };
 class plate :public container
 {
