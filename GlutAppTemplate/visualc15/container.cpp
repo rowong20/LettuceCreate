@@ -43,8 +43,7 @@ bool container::isFull() {
 <<<<<<< HEAD
 }*/
 
-=======
-}
+
 //transfers the contents of one container to the other, and clears the input container afterwards
 void container::transfer(container* &input)
 {
@@ -52,7 +51,7 @@ void container::transfer(container* &input)
 	input->ingredients.clear();
 	input->changeImage(input->defaultImage);
 }
->>>>>>> 8df773405994eaeb2796eee4a780613feb19d247
+
 container::~container()
 {
 }
