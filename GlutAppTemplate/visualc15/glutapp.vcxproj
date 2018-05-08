@@ -128,6 +128,7 @@
     <ClCompile Include="..\windows\stb_image_aug.c" />
     <ClCompile Include="container.cpp" />
     <ClCompile Include="Ingredient.cpp" />
+    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AnimatedRect.h" />
@@ -165,6 +166,7 @@
     <ClInclude Include="..\windows\stb_image_aug.h" />
     <ClInclude Include="container.h" />
     <ClInclude Include="Ingredient.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

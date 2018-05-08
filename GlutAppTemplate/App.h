@@ -1,6 +1,6 @@
 #ifndef App_hpp
 #define App_hpp
-
+#include "../visualc15/Timer.h"
 #include "GlutApp.h"
 #include "TexRect.h"
 #include "AnimatedRect.h"
