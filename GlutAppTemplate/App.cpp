@@ -4,7 +4,9 @@
 using namespace std;
 
 static App* singleton;
-vector<int> kitchenTimer;
+Timer* pan1Timer;
+Timer* pan2Timer;
+//vector<int> kitchenTimer;
 /*/
 void app_timer(int value){
     if (singleton->game_over){
@@ -88,8 +90,11 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
 	trash = new TexRect("../images/trash.png", 0.7, -0.1, 0.2, 0.3);
 	serve = new TexRect("../images/serve.png", 0.7, 0.4, 0.2, 0.3);
 
-	for (int i = 0; i < 6; i++)
-		kitchenTimer.push_back(0);
+	pan1Timer = new Timer(-0.8, 0.05);
+	pan2Timer = new Timer(-0.5, 0.05);
+
+	/*for (int i = 0; i < 6; i++)
+		kitchenTimer.push_back(0);*/
     
     //gameOver = new AnimatedRect("../images/game_over.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
@@ -100,6 +105,23 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     
     //app_timer(1);
 
+}
+
+void gauge(int value)
+{
+	if (!pan1Timer->done()) {
+		pan1Timer->advanceGauge();
+		pan1Timer->drawPotGauge();
+		glutPostRedisplay();
+		glutTimerFunc(10000, gauge, value);
+	}
+	if (!pan2Timer->done()) {
+		pan2Timer->advanceGauge();
+		pan2Timer->drawPotGauge();
+		glutPostRedisplay();
+		glutTimerFunc(10000, gauge, value);
+	}
+	//cout << "w after advance: " << w << endl;				//testing
 }
 
 //void App::kitchenTimerGauge(bool full, int which)						//0 = undercooked; 1 = cooked; 2 = overcooked for pots/pans
@@ -211,15 +233,17 @@ void App::draw() {
 	//kitchenTimerGauge(true, 0);
 
 	//testing Timer
-	Timer t(-0.6, 0.05);
-	cout << "fullgauge before advance: "<< t.done() << endl;
-	for (int i = 0; i < 100; i++)
-	{
-		t.advanceGauge();
-		t.drawPotGauge();
-		//redraw();
-	}
-	cout << "fullgauge after advance: " << t.done() << endl;
+	//Timer t(-0.6, 0.05);
+	cout << "fullgauge before advance: "<< pan1Timer->done() << endl;
+	//int w = 0;
+	gauge(0);
+	//for (int i = 0; i < 100; i++)
+	//{
+	//	t.advanceGauge();
+	//	t.drawPotGauge();
+	//	//redraw();
+	//}
+	cout << "fullgauge after advance: " << pan1Timer->done() << endl;
 	//testing Timer
     
 	//gameOver->draw();

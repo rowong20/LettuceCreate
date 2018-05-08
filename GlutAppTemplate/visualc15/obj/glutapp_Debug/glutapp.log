@@ -1,43 +1,95 @@
-﻿  App.cpp
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(71): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(72): warning C4305: 'argument': truncation from 'double' to 'float'
+﻿  AnimatedRect.cpp
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\animatedrect.cpp(51): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\animatedrect.cpp(52): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\animatedrect.cpp(83): warning C4305: '+=': truncation from 'double' to 'float'
+  App.cpp
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(73): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(74): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(75): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(76): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(77): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(78): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(79): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(80): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(81): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(82): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(83): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(84): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(85): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(86): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(87): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(88): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(89): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(181): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(184): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(185): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(186): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(187): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(188): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(189): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(190): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(191): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(192): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(193): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(194): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(195): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(196): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(197): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(198): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(199): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(214): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(325): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(326): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(327): warning C4305: '=': truncation from 'double' to 'float'
-  Timer.cpp
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(90): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(91): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(203): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(206): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(207): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(208): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(209): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(210): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(211): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(212): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(213): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(214): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(215): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(216): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(217): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(218): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(219): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(220): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(221): warning C4305: 'argument': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(349): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(350): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\app.cpp(351): warning C4305: '=': truncation from 'double' to 'float'
   app_main.cpp
+  GlutApp.cpp
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\glutapp.cpp(44): warning C4305: '-=': truncation from 'double' to 'float'
+  TexRect.cpp
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\texrect.cpp(32): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\texrect.cpp(33): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\texrect.cpp(45): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\texrect.cpp(51): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Timer.cpp
+  Generating Code...
+  image_DXT.c
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\image_dxt.c(92): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+  image_helper.c
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\image_helper.c(325): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\image_helper.c(366): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\image_helper.c(373): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\image_helper.c(415): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\image_helper.c(422): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  SOIL.c
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\soil.c(1719): warning C4018: '<=': signed/unsigned mismatch
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\soil.c(1729): warning C4018: '<': signed/unsigned mismatch
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\soil.c(1841): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+  stb_image_aug.c
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(177): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(251): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(303): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(1557): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(2394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(2709): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(2995): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(3209): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(3548): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stb_image_aug.c(3644): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stbi_dds_aug_c.h(362): warning C4018: '>': signed/unsigned mismatch
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stbi_dds_aug_c.h(366): warning C4018: '>': signed/unsigned mismatch
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stbi_dds_aug_c.h(390): warning C4018: '<': signed/unsigned mismatch
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stbi_dds_aug_c.h(427): warning C4018: '<': signed/unsigned mismatch
+c:\users\richard\documents\github\lettucecreate\glutapptemplate\windows\stbi_dds_aug_c.h(498): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\ucrt\stdio.h(207): note: see declaration of 'fopen'
   Generating Code...
 AnimatedRect.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   glutapp.vcxproj -> C:\Users\Richard\Documents\GitHub\LettuceCreate\GlutAppTemplate\visualc15\obj\glutapp_Debug\glutapp.exe

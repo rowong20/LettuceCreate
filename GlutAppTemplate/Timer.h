@@ -9,7 +9,7 @@ class Timer
 	double x;						//x position of gauge
 	double y;						//y position of gauge
 	double w;						//width of gauge changes over time
-	bool fullgauge;					//if gauge is full or not (currently using 0.2 for full)
+	bool fullgauge = false;					//if gauge is full or not (currently using 0.2 for full)
 	bool burnt;						//if pot/pan is burning
 	int cooked;						//0 = undercooked; 1 = cooked; 2 = overcooked
 	int cut;						//0 = uncut; 1 = cut
@@ -25,12 +25,12 @@ public:
 		cut = 0;
 		burnt = false;
 	}*/
-	Timer(int xpos, int ypos)
+	Timer(double xpos, double ypos)
 	{
 		x = xpos;
 		y = ypos;
 		w = 0.0;
-		fullgauge = false;
+		//fullgauge = false;
 		cooked = 0;
 		cut = 0;
 		burnt = false;
@@ -38,7 +38,9 @@ public:
 
 	void drawPotGauge();
 	void drawBoardGauge();
+	//double advanceGauge(double w);
 	void advanceGauge();
+	void complete();
 	void burn();
 	bool done();
 	int cookingStatus();

@@ -6,6 +6,7 @@ void Timer::drawPotGauge()
 {
 	glColor3d(252.0, 0.0, 0.0);
 	glRectd(x, y, x + w, y - 0.1);
+	cout << x << " " << y << endl;
 	//redraw();
 }
 
@@ -16,10 +17,22 @@ void Timer::drawBoardGauge()
 	//redraw();
 }
 
+//double Timer::advanceGauge(double w)
 void Timer::advanceGauge()
 {
-	w += .002;
+	//glutPostRedisplay();
+	//glutTimerFunc(500, advanceGauge, 0);
 	cout << "w after advance: " << w << endl;				//testing
+	if (w >= 0.2)
+		fullgauge = true;
+	else
+		w += .0002;
+	//return w;
+}
+
+void Timer::complete()
+{
+	fullgauge = true;
 }
 
 void Timer::burn()
@@ -32,12 +45,12 @@ void Timer::burn()
 
 bool Timer::done()
 {
-	if (w == 0.2)
-		fullgauge = true;
+	if (w >= 0.2)
+		return true;
 	else
-		fullgauge = false;
+		return false;
 	//cout <<"fullgauge after done: "<< fullgauge << endl;				//testing
-	return fullgauge;
+	//return fullgauge;
 }
 
 int Timer::cookingStatus()
