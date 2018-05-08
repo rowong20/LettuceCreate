@@ -6,8 +6,8 @@ c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(69): 
 c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(123): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(126): warning C4305: 'argument': truncation from 'double' to 'float'
 c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(127): warning C4305: 'argument': truncation from 'double' to 'float'
-c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(178): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(179): warning C4305: '=': truncation from 'double' to 'float'
-c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(180): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(190): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(191): warning C4305: '=': truncation from 'double' to 'float'
+c:\users\roman wong\documents\github\lettucecreate\glutapptemplate\app.cpp(192): warning C4305: '=': truncation from 'double' to 'float'
 AnimatedRect.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
   glutapp.vcxproj -> C:\Users\Roman Wong\Documents\GitHub\LettuceCreate\GlutAppTemplate\visualc15\obj\glutapp_Debug\glutapp.exe
