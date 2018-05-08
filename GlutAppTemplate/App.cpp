@@ -63,7 +63,7 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     
     background = new TexRect("../images/board.png", -1, 1, 2, 2);
     ball = new TexRect("../images/mushroom_uncut.png", 0, 0.67, 0.2, 0.2);
-
+	tomato = new Onion(.2, -0.7, 0.2, 0.2);
     platform = new TexRect("../images/pan_empty.png", 0, -0.7, 0.6, 0.2);
     
     gameOver = new AnimatedRect("../images/knife.png", 7, 1, -1.0, 0.8, 2, 1.2);
@@ -125,7 +125,7 @@ void App::draw() {
 	glColor3f(1,1,1);
 	platform->draw(-0.3);
 	ball->draw(-0.4);
-	
+	tomato->draw(-0.5);
 	
    
     
@@ -139,23 +139,20 @@ void App::draw() {
 
 void App::mouseDown(float x, float y){
     // Update app state
-    mx = x;
-    my = y;
-
-	if (singleton->ball->contains(x, y)) {
-		mouseDrag(x, y);
+	if (singleton->tomato->contains(x, y)) {
+		singleton->tomato->cut();
 	}
-
 }
 
 void App::mouseDrag(float x, float y){
     // Update app state
     //mx = x;
     //my = y;
-
-	singleton->ball->x = x;
-	singleton->ball->y = y;
-	redraw();
+	if (singleton->tomato->contains(x, y)) {
+		singleton->tomato->x = x- tomato->w/2;
+		singleton->tomato->y = y + tomato->h/2;
+		redraw();
+	}
 
 }
 

@@ -20,7 +20,7 @@ public:
     float h;
     GLuint texture_id;
 
-
+	TexRect();
     TexRect (const char*, float, float, float, float);
     
     void draw(float);
@@ -31,7 +31,7 @@ public:
     void moveDown(float rate=0.01);
     void moveLeft(float rate=0.01);
     void moveRight(float rate=0.01);
-    
+	void changeImage(const char* filename);
     void jump();
     
     bool rising;
