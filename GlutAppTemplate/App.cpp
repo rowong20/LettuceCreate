@@ -63,9 +63,10 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     
     background = new TexRect("../images/board.png", -1, 1, 2, 2);
     ball = new TexRect("../images/mushroom_uncut.png", 0, 0.67, 0.2, 0.2);
-	tomato = new Onion(.2, -0.7, 0.2, 0.2);
-    platform = new TexRect("../images/pan_empty.png", 0, -0.7, 0.6, 0.2);
-    
+	tomato = new Lettuce(.2, -0.7, 0.2, 0.2);
+    platform = new pot( 0, 0, 0.4, 0.4);
+    s1=new Meat(.3, -0.7, 0.2, 0.2);
+	s2=new Tomato(.4 , -0.7, 0.2, 0.2);
     gameOver = new AnimatedRect("../images/knife.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
     up = down = left = right = false;
@@ -126,8 +127,6 @@ void App::draw() {
 	platform->draw(-0.3);
 	ball->draw(-0.4);
 	tomato->draw(-0.5);
-	
-   
     
 	gameOver->draw();
 	
@@ -140,7 +139,7 @@ void App::draw() {
 void App::mouseDown(float x, float y){
     // Update app state
 	if (singleton->tomato->contains(x, y)) {
-		singleton->tomato->cut();
+		singleton->mouseDrag(x,y);
 	}
 }
 
@@ -163,8 +162,14 @@ void App::mouseUp(float x, float y) {
 	float objecty = tomato->y - tomato->h / 2;
 	std::cout << "Coordinates of object is centered at: " << objectx << "," << objecty << std::endl;
 	if (platform->contains(objectx,objecty)){
-		std::cout << "its in!" << std::endl;
+		std::cout << "adding ingredient" << singleton->tomato->getName()<<std::endl;
+		platform->addIngredient(tomato);
+		//platform->addIngredient(s1);
+		//platform->addIngredient(s2);
+		platform->check();
+		delete tomato;
 	}
+	redraw();
 
 }
 

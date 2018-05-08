@@ -1,5 +1,6 @@
 #include "Ingredient.h"
 #include <iostream>
+
 Ingredient::Ingredient() {
 	std::cout << "Creating Ingredient"<<std::endl;
 }
@@ -7,6 +8,7 @@ Ingredient::Ingredient() {
 Tomato::Tomato(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/tomato_uncut.png";
 	std::cout << " Creating Tomato"<<std::endl;
+	name = "tomato";
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
@@ -29,8 +31,8 @@ Tomato::Tomato(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->w = w;
 	this->h = h;
 }
-int Tomato::getStatus() {
-	return status;
+std::string Tomato::getName() {
+	return name;
 }
 void Tomato::cut() {
 	status = 2;
@@ -43,6 +45,7 @@ void Tomato::cooked(int quality) {
 Mushroom::Mushroom(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/mushroom_uncut.png";
 	std::cout << " Creating Mushroom" << std::endl;
+	name = "mushroom";
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
@@ -65,8 +68,8 @@ Mushroom::Mushroom(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->w = w;
 	this->h = h;
 }
-int Mushroom::getStatus() {
-	return status;
+std::string Mushroom::getName() {
+	return name;
 }
 void Mushroom::cut() {
 	status = 2;
@@ -78,6 +81,7 @@ void Mushroom::cooked(int quality) {
 
 Onion::Onion(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/onion_uncut.png";
+	name = "onion";
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
@@ -100,8 +104,8 @@ Onion::Onion(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->w = w;
 	this->h = h;
 }
-int Onion::getStatus() {
-	return status;
+std::string Onion::getName() {
+	return name;
 }
 void Onion::cut() {
 	status = 2;
@@ -112,6 +116,7 @@ void Onion::cooked(int quality) {
 }
 Meat::Meat(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/meat_uncut.png";
+	name = "meat";
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
@@ -134,8 +139,8 @@ Meat::Meat(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->w = w;
 	this->h = h;
 }
-int Meat::getStatus() {
-	return status;
+std::string Meat::getName() {
+	return name;
 }
 void Meat::cut() {
 	status = 2;
@@ -146,6 +151,7 @@ void Meat::cooked(int quality) {
 }
 Lettuce::Lettuce(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/lettuce_uncut.png";
+	name = "lettuce";
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
@@ -168,8 +174,8 @@ Lettuce::Lettuce(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->w = w;
 	this->h = h;
 }
-int Lettuce::getStatus() {
-	return status;
+std::string Lettuce::getName() {
+	return name;
 }
 void Lettuce::cut() {
 	status = 2;
@@ -180,6 +186,8 @@ void Lettuce::cooked(int quality) {
 }
 Bun::Bun(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/bun_empty.png";
+	name = "bun";
+	std::cout << "initializing " << name << std:: endl;
 	glClearColor(0.0, 0.0, 0.0, 0.0);
 	glShadeModel(GL_FLAT);
 	glEnable(GL_DEPTH_TEST);
@@ -202,11 +210,11 @@ Bun::Bun(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	this->w = w;
 	this->h = h;
 }
-int Bun::getStatus() {
-	return status;
+std::string Bun::getName() {
+	return name;
 }
 void Bun::cut() {
-	std::cout << "You can't cut Bread dummy" << std::endl;
+	std::cout << "You can't cut Bread dummy" <<std::endl;
 }
 void Bun::cooked(int quality) {
 	std::cout << "You can't cook Bread dummy" << std::endl;

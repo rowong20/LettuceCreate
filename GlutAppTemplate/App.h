@@ -6,6 +6,7 @@
 #include "AnimatedRect.h"
 #include "../visualc15/Ingredient.h"
 #include "Sound.h"
+#include "../visualc15/container.h"
 class App: public GlutApp {
     // Maintain app state here
 	Sound sound;
@@ -30,11 +31,13 @@ public:
     
     TexRect* ball;
     
-    TexRect* platform;
+    container* platform;
     
     TexRect* background;
     
 	Ingredient* tomato;
+	Ingredient* s1;
+	Ingredient* s2;
 
     AnimatedRect* gameOver;
     

@@ -11,6 +11,9 @@
     <ClCompile Include="..\windows\SOIL.c" />
     <ClCompile Include="..\windows\stb_image_aug.c" />
     <ClCompile Include="Ingredient.cpp" />
+    <ClCompile Include="..\Jukebox.cpp" />
+    <ClCompile Include="..\Sound.cpp" />
+    <ClCompile Include="container.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\AnimatedRect.h" />
@@ -87,6 +90,9 @@
     <ClInclude Include="..\irrKlang\irrKlang.h">
       <Filter>irrKlang</Filter>
     </ClInclude>
+    <ClInclude Include="..\Jukebox.h" />
+    <ClInclude Include="..\Sound.h" />
+    <ClInclude Include="container.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="irrKlang">

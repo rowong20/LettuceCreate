@@ -126,6 +126,7 @@
     <ClCompile Include="..\windows\image_helper.c" />
     <ClCompile Include="..\windows\SOIL.c" />
     <ClCompile Include="..\windows\stb_image_aug.c" />
+    <ClCompile Include="container.cpp" />
     <ClCompile Include="Ingredient.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +163,7 @@
     <ClInclude Include="..\windows\stbi_DDS_aug.h" />
     <ClInclude Include="..\windows\stbi_DDS_aug_c.h" />
     <ClInclude Include="..\windows\stb_image_aug.h" />
+    <ClInclude Include="container.h" />
     <ClInclude Include="Ingredient.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
