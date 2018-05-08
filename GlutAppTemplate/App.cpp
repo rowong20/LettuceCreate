@@ -56,7 +56,7 @@ void app_timer(int value){
 
 App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w, h){
     // Initialize state variables
-    
+	sound.init("../sounds/OvercookedBGM.wav");
     singleton = this;
     mx = 0.0;
     my = 0.0;
@@ -184,7 +184,9 @@ void App::keyPress(unsigned char key) {
         
         exit(0);
     }
-    
+	else if (key == 'p') {
+		sound.playS("../sounds/PanSizzle.wav");
+	}
     if (key == ' '){
         ball->x = 0;
         ball->y = 0.67;

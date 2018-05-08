@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\AnimatedRect.cpp" />
+    <ClCompile Include="..\App.cpp" />
+    <ClCompile Include="..\app_main.cpp" />
+    <ClCompile Include="..\GlutApp.cpp" />
+    <ClCompile Include="..\TexRect.cpp" />
+    <ClCompile Include="..\windows\image_DXT.c" />
+    <ClCompile Include="..\windows\image_helper.c" />
+    <ClCompile Include="..\windows\SOIL.c" />
+    <ClCompile Include="..\windows\stb_image_aug.c" />
+    <ClCompile Include="Ingredient.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\AnimatedRect.h" />
+    <ClInclude Include="..\App.h" />
+    <ClInclude Include="..\GlutApp.h" />
+    <ClInclude Include="..\TexRect.h" />
+    <ClInclude Include="..\windows\image_DXT.h" />
+    <ClInclude Include="..\windows\image_helper.h" />
+    <ClInclude Include="..\windows\SOIL.h" />
+    <ClInclude Include="..\windows\stbi_DDS_aug.h" />
+    <ClInclude Include="..\windows\stbi_DDS_aug_c.h" />
+    <ClInclude Include="..\windows\stb_image_aug.h" />
+    <ClInclude Include="Ingredient.h" />
+    <ClInclude Include="..\irrKlang\ik_ESoundEngineOptions.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ESoundOutputDrivers.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_EStreamModes.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IAudioRecorder.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IAudioStream.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IAudioStreamLoader.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IFileFactory.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IFileReader.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IRefCounted.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_irrKlangTypes.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISound.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISoundDeviceList.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISoundEffectControl.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISoundEngine.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISoundMixedOutputReceiver.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISoundSource.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_ISoundStopEventReceiver.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_IVirtualRefCounted.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_SAudioStreamFormat.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\ik_vec3d.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\irrKlang\irrKlang.h">
+      <Filter>irrKlang</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="irrKlang">
+      <UniqueIdentifier>{7064e829-054e-49e0-a741-5d98077af925}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
