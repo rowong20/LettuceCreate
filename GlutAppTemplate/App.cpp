@@ -1,6 +1,9 @@
 #include "App.h"
+    
 
 static App* singleton;
+Timer* pan1Timer;
+Timer* pan2Timer;
 /*/
 void app_timer(int value){
     if (singleton->game_over){
@@ -69,6 +72,9 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
 	s2=new Tomato(.4 , -0.7, 0.2, 0.2);
     gameOver = new AnimatedRect("../images/knife.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
+	pan1Timer = new Timer(-0.8, 0.05);
+	pan2Timer = new Timer(-0.5, 0.05);
+
     up = down = left = right = false;
     
     moving = true;
@@ -76,6 +82,23 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     
     //app_timer(1);
 
+}
+
+void gauge(int value)
+{
+	if (!pan1Timer->done()) {
+		pan1Timer->advanceGauge();
+		pan1Timer->drawPotGauge();
+		glutPostRedisplay();
+		glutTimerFunc(10000, gauge, value);
+	}
+	if (!pan2Timer->done()) {
+		pan2Timer->advanceGauge();
+		pan2Timer->drawPotGauge();
+		glutPostRedisplay();
+		glutTimerFunc(10000, gauge, value);
+	}
+	//cout << "w after advance: " << w << endl;				//testing
 }
 
 void App::specialKeyPress(int key){
@@ -127,9 +150,7 @@ void App::draw() {
 	platform->draw(-0.3);
 	ball->draw(-0.4);
 	tomato->draw(-0.5);
-    
-	gameOver->draw();
-	
+	gauge(0);
     // We have been drawing everything to the back buffer
     // Swap the buffers to see the result of what we drew
     glFlush();
@@ -168,6 +189,7 @@ void App::mouseUp(float x, float y) {
 		//platform->addIngredient(s2);
 		platform->check();
 		delete tomato;
+		sound.playS("../sounds/GameOver.wav");
 	}
 	redraw();
 
