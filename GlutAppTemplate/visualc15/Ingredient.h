@@ -2,6 +2,7 @@
 #ifndef INGREDIENT_H
 #define INGREDIENT_H
 #include "TexRect.h"
+//abstract class Ingredient.
 class Ingredient :public TexRect
 {
 	int status;

@@ -65,7 +65,7 @@ App::App(const char* label, int x, int y, int w, int h): GlutApp(label, x, y, w,
     ball = new TexRect("../images/mushroom_uncut.png", 0, 0.67, 0.2, 0.2);
 	tomato = new Onion(.2, -0.7, 0.2, 0.2);
     platform = new TexRect("../images/pan_empty.png", 0, -0.7, 0.6, 0.2);
-    
+    tool=new pan(-.2, -0.7, 0.2, 0.2);
     gameOver = new AnimatedRect("../images/knife.png", 7, 1, -1.0, 0.8, 2, 1.2);
     
     up = down = left = right = false;
@@ -126,7 +126,7 @@ void App::draw() {
 	platform->draw(-0.3);
 	ball->draw(-0.4);
 	tomato->draw(-0.5);
-	
+	tool->draw(-0.5);
    
     
 	gameOver->draw();
