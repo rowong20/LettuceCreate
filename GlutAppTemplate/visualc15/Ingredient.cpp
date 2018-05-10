@@ -42,6 +42,7 @@ void Tomato::cooked(int quality) {
 	status = quality;
 }
 
+
 Mushroom::Mushroom(float x = 0, float y = 0, float w = 0.5, float h = 0.5) {
 	const char* filename = "../images/mushroom_uncut.png";
 	std::cout << " Creating Mushroom" << std::endl;

@@ -24,22 +24,40 @@ public:
     void mouseDrag(float x, float y);
 	void mouseUp(float x, float y);
     void specialKeyPress(int key);
-    
+	void reset(Ingredient* &processed);
     void specialKeyUp(int key);
     
     void idle();
     
-    TexRect* ball;
-    
+	TexRect* trash;
+	TexRect* serve;
+
     container* platform;
     
     TexRect* background;
     
+	Ingredient* bun;
+	Ingredient* meat;
+	Ingredient* lettuce;
+	Ingredient* mushroom;
+	Ingredient* onion;
 	Ingredient* tomato;
-	Ingredient* s1;
-	Ingredient* s2;
+
+	std::vector<Ingredient*>ingredients;
+
+	container* pan1;
+	container* pan2;
+	container* board1;
+	container* board2;
+	container* pot1;
+	container* pot2;
+	container* plate1;
+	container* plate2;
+
+	std::vector<container*>containers;
 
     AnimatedRect* gameOver;
+	TexRect* gordon;
     
     bool up;
     bool down;
