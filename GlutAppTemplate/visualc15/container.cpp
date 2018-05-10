@@ -324,23 +324,11 @@ void plate::check() {
 		}
 		if (ingredients[i]->getName() == "mushroom")
 		{
-			onion = true;
+			mushroom = true;
 		}
 	}
 	if (onion) {
 		changeImage("../images/soup_onion.png");
-	}
-	else if (mushroom) {
-		changeImage("../images/soup_mushroom.png");
-	}
-	else if (lettuce&&tomato) {
-		changeImage("../images/salad_lettuce_tomato.png");
-	}
-	else if (lettuce) {
-		changeImage("../images/salad_lettuce.png");
-	}
-	else if (tomato) {
-		changeImage("../images/soup_tomato.png");
 	}
 	else if (bun&&lettuce&&tomato&&meat) {
 		changeImage("../images/bun_full.png");
@@ -356,6 +344,18 @@ void plate::check() {
 	}
 	else if (bun) {
 		changeImage("../images/bun_plate.png");
+	}
+	else if (mushroom) {
+		changeImage("../images/soup_mushroom.png");
+	}
+	else if (lettuce&&tomato) {
+		changeImage("../images/salad_lettuce_tomato.png");
+	}
+	else if (lettuce) {
+		changeImage("../images/salad_lettuce.png");
+	}
+	else if (tomato) {
+		changeImage("../images/soup_tomato.png");
 	}
 	else
 		std::cout << "kys"<<std::endl;
